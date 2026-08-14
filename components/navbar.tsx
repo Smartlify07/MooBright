@@ -5,6 +5,8 @@ import React, { useState } from "react"
 import { Button } from "./ui/button"
 import HamburgerMenuBrokenIcon from "@iconify-react/solar/hamburger-menu-broken"
 import { cn } from "@/lib/utils"
+import { ArrowRight } from "lucide-react"
+import { usePathname } from "next/navigation"
 
 const navLinks = [
   {
@@ -31,6 +33,8 @@ const Navbar = () => {
     setIsOpen((prev) => !prev)
   }
 
+  const pathname = usePathname()
+
   return (
     <nav className="absolute top-5 left-0 flex w-full items-center px-5 text-background md:px-10">
       <div className="container flex items-center justify-between text-sm">
@@ -44,7 +48,7 @@ const Navbar = () => {
           />
         </Link>
 
-        <ul className="hidden items-center justify-center gap-6 md:flex">
+        <ul className="z-1000 hidden items-center justify-center gap-6 md:flex">
           {navLinks.map((link) => (
             <Link key={link.href} href={link.href}>
               {link.label}
@@ -52,8 +56,11 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <Button variant="ghost" className="hidden text-sm md:block">
-          Get a quote
+        <Button
+          variant="secondary"
+          className="z-1000 hidden h-9 w-31 text-sm md:flex"
+        >
+          Get a quote <ArrowRight />
         </Button>
 
         <button
@@ -81,7 +88,10 @@ const Navbar = () => {
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
-                  className="flex h-8 w-full max-w-45 items-center justify-center rounded-[10px] hover:bg-muted"
+                  className={cn(
+                    "flex h-8 w-full max-w-45 items-center justify-center rounded-[10px] hover:bg-muted",
+                    pathname === link.href && "bg-muted"
+                  )}
                   href={link.href}
                 >
                   {link.label}
@@ -89,7 +99,7 @@ const Navbar = () => {
               ))}
             </ul>
 
-            <Button className="h-10 w-full max-w-45 self-center bg-foreground text-sm hover:bg-foreground">
+            <Button className="h-10 w-full max-w-45 self-center bg-foreground text-sm hover:bg-foreground/90">
               Get a quote
             </Button>
           </div>
