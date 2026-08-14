@@ -1,14 +1,18 @@
-import { Geist, Geist_Mono, Inter } from "next/font/google"
+import { Bricolage_Grotesque, Geist, Geist_Mono, Inter } from "next/font/google"
 
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
-import { cn } from "@/lib/utils";
-
-const inter = Inter({subsets:['latin'],variable:'--font-sans'})
+import { cn } from "@/lib/utils"
+import Navbar from "@/components/navbar"
 
 const fontMono = Geist_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
+})
+
+const bricolage = Bricolage_Grotesque({
+  subsets: ["latin"],
+  variable: "--font-sans",
 })
 
 export default function RootLayout({
@@ -20,10 +24,17 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={cn("antialiased", fontMono.variable, "font-sans", inter.variable)}
+      className={cn(
+        "antialiased",
+        fontMono.variable,
+        "font-sans",
+        bricolage.variable
+      )}
     >
-      <body>
-        <ThemeProvider>{children}</ThemeProvider>
+      <body className="relative min-h-svh">
+        <Navbar />
+
+        {children}
       </body>
     </html>
   )
