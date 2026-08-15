@@ -132,7 +132,7 @@
     cursor: pointer;
   }
   html {
-    @apply font-sans;
+    @apply overflow-x-hidden font-sans;
   }
 }
 
@@ -142,5 +142,69 @@
   }
   .tracking-neg-5 {
     @apply -tracking-[5%];
+  }
+}
+
+.bg-1 {
+  animation-name: fade;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+}
+
+.bg-2 {
+  animation-delay: 4s;
+  animation-name: fade;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+}
+.bg-3 {
+  animation-delay: 8s;
+  animation-name: fade;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+}
+
+@media (max-width: 1023px) {
+  .bg-1 {
+    background-image: url(../public/home/Plumbing-hero-mobile.png);
+  }
+
+  .bg-2 {
+    background-image: url(../public/home/Laundry-mobile.png);
+  }
+  .bg-3 {
+    background-image: url(../public/home/Fashion-hero-mobile.png);
+  }
+}
+
+@media (min-width: 1024px) {
+  .bg-1 {
+    background-image: url(../public/home/Plumbing-hero.png);
+  }
+
+  .bg-2 {
+    background-image: url(../public/home/Laundry.png);
+  }
+
+  .bg-3 {
+    background-image: url(../public/home/Fashion-hero.png);
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  8.33% {
+    opacity: 1;
+  } /* Fade in */
+  33.33% {
+    opacity: 1;
+  } /* Stay visible */
+  41.66% {
+    opacity: 0;
+  } /* Fade out */
+  100% {
+    opacity: 0;
   }
 }

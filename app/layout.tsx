@@ -31,7 +31,7 @@ export default function RootLayout({
         bricolage.variable
       )}
     >
-      <body className="relative min-h-svh">
+      <body className="relative min-h-svh overflow-x-hidden">
         <Navbar />
 
         {children}

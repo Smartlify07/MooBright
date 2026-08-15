@@ -38,6 +38,9 @@ importers:
       react-dom:
         specifier: 19.2.4
         version: 19.2.4(react@19.2.4)
+      react-haiku:
+        specifier: ^2.4.1
+        version: 2.4.1(react@19.2.4)
       shadcn:
         specifier: ^4.17.0
         version: 4.17.0(typescript@5.9.3)
@@ -2510,6 +2513,11 @@ packages:
     resolution: {integrity: sha512-AXJdLo8kgMbimY95O2aKQqsz2iWi9jMgKJhRBAxECE4IFxfcazB2LmzloIoibJI3C12IlY20+KFaLv+71bUJeQ==}
     peerDependencies:
       react: ^19.2.4
+
+  react-haiku@2.4.1:
+    resolution: {integrity: sha512-8f3JVL+VvmkHhd3OFQCtY46vmPJuVqNeaYH7aoZsh7mACvsafu3Sh3xvynBciaWi6/cl7ABIe9pR+Ur1kSJ69Q==}
+    peerDependencies:
+      react: '>=16.8.0'
 
   react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
@@ -5466,6 +5474,10 @@ snapshots:
     dependencies:
       react: 19.2.4
       scheduler: 0.27.0
+
+  react-haiku@2.4.1(react@19.2.4):
+    dependencies:
+      react: 19.2.4
 
   react-is@16.13.1: {}
 

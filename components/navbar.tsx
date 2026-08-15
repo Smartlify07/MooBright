@@ -1,7 +1,7 @@
 "use client"
 import Image from "next/image"
 import Link from "next/link"
-import React, { useState } from "react"
+import React, { useRef, useState } from "react"
 import { Button } from "./ui/button"
 import HamburgerMenuBrokenIcon from "@iconify-react/solar/hamburger-menu-broken"
 import { cn } from "@/lib/utils"
@@ -26,6 +26,7 @@ const navLinks = [
     label: "Contact",
   },
 ]
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
 
@@ -36,7 +37,7 @@ const Navbar = () => {
   const pathname = usePathname()
 
   return (
-    <nav className="absolute top-5 left-0 flex w-full items-center px-5 text-background md:px-10">
+    <nav className="absolute top-10 left-0 flex w-full items-center px-5 text-background md:px-10">
       <div className="container flex items-center justify-between text-sm">
         <Link href="/" className="z-1000">
           <Image
@@ -58,9 +59,10 @@ const Navbar = () => {
 
         <Button
           variant="secondary"
-          className="z-1000 hidden h-9 w-31 text-sm md:flex"
+          className="group z-1000 hidden h-9 w-31 text-sm md:flex"
         >
-          Get a quote <ArrowRight />
+          Get a quote{" "}
+          <ArrowRight className="transition-transform group-hover:translate-x-0.5" />
         </Button>
 
         <button
@@ -73,36 +75,36 @@ const Navbar = () => {
         </button>
 
         <div
+          onClick={() => setIsOpen(false)}
           className={cn(
-            isOpen ? "opacity-100" : "opacity-0",
-            "fixed top-0 left-0 z-100 h-full min-h-svh w-full bg-black/20 transition-opacity md:hidden"
+            isOpen ? "opacity-100" : "invisible opacity-0",
+            "fixed top-0 left-0 z-1000 h-full min-h-svh w-full bg-black/25 transition-opacity transition-discrete duration-300 md:hidden"
+          )}
+        />
+        <div
+          className={cn(
+            "absolute top-30 left-40 z-1000 flex h-93.25 w-53.75 flex-col justify-between gap-10 rounded-lg bg-background px-2.5 py-6 transition-transform duration-300 ease-in-out md:hidden",
+            isOpen ? "-translate-x-[5%]" : "translate-x-[100%]"
           )}
         >
-          <div
-            className={cn(
-              "absolute top-30 -right-54 flex h-93.25 w-53.75 flex-col justify-between gap-10 rounded-lg bg-background px-2.5 py-6 transition-transform duration-300 md:hidden",
-              isOpen ? "-translate-x-59" : "translate-x-59"
-            )}
-          >
-            <ul className="flex flex-col items-center justify-center gap-6 p-2 text-foreground">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  className={cn(
-                    "flex h-8 w-full max-w-45 items-center justify-center rounded-[10px] hover:bg-muted",
-                    pathname === link.href && "bg-muted"
-                  )}
-                  href={link.href}
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </ul>
+          <ul className="flex flex-col items-center justify-center gap-6 p-2 text-foreground">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                className={cn(
+                  "flex h-8 w-full max-w-45 items-center justify-center rounded-[10px] hover:bg-muted",
+                  pathname === link.href && "bg-muted"
+                )}
+                href={link.href}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </ul>
 
-            <Button className="h-10 w-full max-w-45 self-center bg-foreground text-sm hover:bg-foreground/90">
-              Get a quote
-            </Button>
-          </div>
+          <Button className="h-10 w-full max-w-45 self-center bg-foreground text-sm hover:bg-foreground/90">
+            Get a quote
+          </Button>
         </div>
       </div>
     </nav>
