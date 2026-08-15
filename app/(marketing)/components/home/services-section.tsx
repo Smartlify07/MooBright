@@ -1,10 +1,11 @@
 import Image from "next/image"
 import React from "react"
+import ServicesCards from "./services-cards"
 
 const ServicesSection = () => {
   return (
     <section className="section-spacing">
-      <div className="container">
+      <div className="container flex flex-col gap-20">
         <header className="flex flex-col items-center gap-6 lg:items-start lg:gap-10">
           <div className="flex items-center gap-3">
             <Image
@@ -37,6 +38,8 @@ const ServicesSection = () => {
             </p>
           </div>
         </header>
+
+        <ServicesCards />
       </div>
     </section>
   )

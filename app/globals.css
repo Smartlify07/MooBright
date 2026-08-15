@@ -216,3 +216,32 @@
     opacity: 0;
   }
 }
+
+/* Services card */
+@media (min-width: 1024px) {
+  .services-cards {
+    transition: 500ms;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+  }
+
+  .services-cards:has(#plumbing:hover) {
+    grid-template-columns: 2fr 1fr 0fr;
+  }
+
+  .services-cards:has(#fashion:hover) {
+    grid-template-columns: 1fr 2fr 0fr;
+  }
+  .services-cards:has(#laundry:hover) {
+    grid-template-columns: 0fr 1fr 2fr;
+  }
+}
+
+@media (max-width: 1023px) {
+  .services-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
