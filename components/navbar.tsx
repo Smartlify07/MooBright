@@ -37,7 +37,7 @@ const Navbar = () => {
   const pathname = usePathname()
 
   return (
-    <nav className="absolute top-10 left-0 flex w-full items-center px-5 text-background md:px-10">
+    <nav className="absolute top-10 left-0 flex w-full items-center px-5 text-background lg:px-10">
       <div className="container flex items-center justify-between text-sm">
         <Link href="/" className="z-1000">
           <Image
@@ -49,7 +49,7 @@ const Navbar = () => {
           />
         </Link>
 
-        <ul className="z-1000 hidden items-center justify-center gap-6 md:flex">
+        <ul className="z-1000 hidden items-center justify-center gap-6 lg:flex">
           {navLinks.map((link) => (
             <Link key={link.href} href={link.href}>
               {link.label}
@@ -59,14 +59,14 @@ const Navbar = () => {
 
         <Button
           variant="secondary"
-          className="group z-1000 hidden h-9 w-31 text-sm md:flex"
+          className="group z-1000 hidden h-9 w-31 text-sm lg:flex"
         >
           Get a quote{" "}
           <ArrowRight className="transition-transform group-hover:translate-x-0.5" />
         </Button>
 
         <button
-          className="z-1000 cursor-pointer md:hidden"
+          className="z-1000 cursor-pointer lg:hidden"
           onClick={() => {
             toggle()
           }}
@@ -78,13 +78,13 @@ const Navbar = () => {
           onClick={() => setIsOpen(false)}
           className={cn(
             isOpen ? "opacity-100" : "invisible opacity-0",
-            "fixed top-0 left-0 z-1000 h-full min-h-svh w-full bg-black/25 transition-opacity transition-discrete duration-300 md:hidden"
+            "fixed top-0 left-0 z-1000 h-full min-h-svh w-full bg-black/25 transition-opacity transition-discrete duration-300 lg:hidden"
           )}
         />
         <div
           className={cn(
-            "absolute top-30 left-40 z-1000 flex h-93.25 w-53.75 flex-col justify-between gap-10 rounded-lg bg-background px-2.5 py-6 transition-transform duration-300 ease-in-out md:hidden",
-            isOpen ? "-translate-x-[5%]" : "translate-x-[100%]"
+            "absolute top-30 right-0 z-1000 flex h-93.25 w-53.75 flex-col justify-between gap-10 rounded-lg bg-background px-2.5 py-6 transition-transform duration-300 ease-in-out lg:hidden",
+            isOpen ? "-translate-x-5" : "translate-x-53.75"
           )}
         >
           <ul className="flex flex-col items-center justify-center gap-6 p-2 text-foreground">
