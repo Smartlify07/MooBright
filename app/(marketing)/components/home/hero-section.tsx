@@ -14,7 +14,7 @@ const HeroSection = () => {
       <div className="absolute top-0 left-0 z-1 h-full w-full bg-[#000002]/50"></div>
       <div className="relative z-100 container mt-28 flex min-h-105.25 flex-col gap-28 lg:mt-38.5 lg:min-h-0 lg:justify-between lg:gap-0">
         <div className="flex max-w-226.75 flex-col gap-6 lg:p-6">
-          <header className="flex flex-col gap-6">
+          <header className="flex flex-col items-center gap-6 lg:items-start">
             <h1 className="tracking-neg-5 text-center text-3xl leading-[100%] font-semibold md:text-5xl lg:text-start lg:text-7xl">
               Most companies do one thing well. We do three.
             </h1>

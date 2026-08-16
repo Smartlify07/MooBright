@@ -175,13 +175,19 @@
 @media (max-width: 1023px) {
   .bg-1 {
     background-image: url(../public/home/Plumbing-hero-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   .bg-2 {
     background-image: url(../public/home/Laundry-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   .bg-3 {
     background-image: url(../public/home/Fashion-hero-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 
@@ -230,6 +236,28 @@
     grid-template-columns: 2fr 1fr 0fr;
   }
 
+  .services-cards img,
+  .services-cards .arrow {
+    opacity: 0;
+    transition-duration: 200ms;
+  }
+
+  .services-cards img {
+    transform: translateX(20px);
+  }
+
+  .services-cards .arrow {
+    transform: translateX(-20px);
+  }
+  .services-cards.services-cards:has(#plumbing:hover) #plumbing img,
+  .services-cards.services-cards:has(#fashion:hover) #fashion img,
+  .services-cards.services-cards:has(#laundry:hover) #laundry img,
+  .services-cards.services-cards:has(#plumbing:hover) #plumbing .arrow,
+  .services-cards.services-cards:has(#fashion:hover) #fashion .arrow,
+  .services-cards.services-cards:has(#laundry:hover) #laundry .arrow {
+    opacity: 1;
+  }
+
   .services-cards:has(#fashion:hover) {
     grid-template-columns: 1fr 2fr 0fr;
   }
@@ -243,5 +271,8 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 12px;
+    img {
+      opacity: 1;
+    }
   }
 }
