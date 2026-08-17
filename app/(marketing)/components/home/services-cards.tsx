@@ -28,7 +28,7 @@ const services = [
         />
       </svg>
     ),
-    imageClassName: "w-71.75 h-76.25",
+    imageClassName: "w-71.75! h-76.25!",
   },
   {
     id: "fashion",
@@ -54,7 +54,7 @@ const services = [
         />
       </svg>
     ),
-    imageClassName: "top-[40%]",
+    imageClassName: "top-4",
   },
   {
     id: "laundry",
@@ -81,7 +81,7 @@ const services = [
       </svg>
     ),
 
-    imageClassName: "top-12.5 w-78.25 h-88 ",
+    imageClassName: " w-71.75 h-88",
   },
 ]
 
@@ -111,9 +111,9 @@ function ServiceCard({
       style={{
         backgroundColor: background,
       }}
-      className="relative min-h-90 overflow-x-hidden rounded-xl bg-muted lg:h-124.5 lg:overflow-y-hidden"
+      className="relative min-h-90 overflow-x-hidden rounded-xl bg-muted px-5 py-8 lg:flex lg:h-124.5 lg:overflow-y-hidden lg:p-7.5"
     >
-      <div className="flex h-full w-full justify-between px-5 py-8 lg:absolute lg:p-7.5">
+      <div className="flex h-full justify-between lg:block">
         <div className="flex h-full flex-col justify-between gap-10">
           <div className="flex flex-col gap-6">
             <div className="flex size-15 items-center justify-center rounded-full bg-background [&>svg]:size-6">
@@ -125,23 +125,32 @@ function ServiceCard({
             </h3>
           </div>
 
-          <p className="max-w-82.5 shrink-0 text-balance text-background lg:w-82.5">
+          <p className="shrink-0 text-balance text-background lg:w-82.5 lg:max-w-82.5">
             {description}
           </p>
         </div>
+
+        <div className="arrow right-0 bottom-0 flex size-15 shrink-0 items-center justify-center rounded-full border-2 border-background text-background opacity-0 lg:hidden">
+          <ArrowRight />
+        </div>
       </div>
-      <Image
-        className={cn(
-          "absolute top-12.5 right-24 hidden lg:inline",
-          imageClassName
-        )}
-        src={imageURL}
-        alt={label + " Image"}
-        width={200}
-        height={400}
-      />
-      <div className="arrow absolute right-0 bottom-12 flex size-15 items-center justify-center rounded-full border-2 border-background text-background opacity-0">
-        <ArrowRight />
+
+      <div className="relative flex w-100 shrink-0 flex-col justify-between">
+        <Image
+          className={cn(
+            "relative hidden min-w-71.75 shrink-0 self-center lg:inline",
+            imageClassName
+          )}
+          src={imageURL}
+          alt={label + " Image"}
+          width={200}
+          height={400}
+
+          quality={100}
+        />
+        <div className="arrow absolute right-0 bottom-0 hidden size-15 shrink-0 items-center justify-center self-end rounded-full border-2 border-background text-background opacity-0 lg:flex">
+          <ArrowRight />
+        </div>
       </div>
     </div>
   )
