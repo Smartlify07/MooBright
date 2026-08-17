@@ -234,20 +234,25 @@
 
   .services-cards:has(#plumbing:hover) {
     grid-template-columns: 2fr 1fr 0fr;
+
+    #plumbing img {
+      opacity: 1;
+    }
   }
 
   .services-cards img,
   .services-cards .arrow {
     opacity: 0;
     transition-duration: 200ms;
+    transition-delay: 50ms;
   }
 
   .services-cards img {
-    transform: translateX(20px);
+    /* transform: translateX(20px); */
   }
 
   .services-cards .arrow {
-    transform: translateX(-20px);
+    /* transform: translateX(-20px); */
   }
   .services-cards.services-cards:has(#plumbing:hover) #plumbing img,
   .services-cards.services-cards:has(#fashion:hover) #fashion img,
@@ -256,13 +261,21 @@
   .services-cards.services-cards:has(#fashion:hover) #fashion .arrow,
   .services-cards.services-cards:has(#laundry:hover) #laundry .arrow {
     opacity: 1;
+    visibility: visible;
   }
 
   .services-cards:has(#fashion:hover) {
     grid-template-columns: 1fr 2fr 0fr;
+
+    #fashion img {
+      opacity: 1;
+    }
   }
   .services-cards:has(#laundry:hover) {
     grid-template-columns: 0fr 1fr 2fr;
+    #laundry img {
+      opacity: 1;
+    }
   }
 }
 
@@ -272,6 +285,9 @@
     grid-template-columns: 1fr;
     gap: 12px;
     img {
+      opacity: 1;
+    }
+    .arrow {
       opacity: 1;
     }
   }
