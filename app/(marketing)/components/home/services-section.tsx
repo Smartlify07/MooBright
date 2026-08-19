@@ -26,8 +26,8 @@ const ServicesSection = () => {
             </div>
           </div>
 
-          <div className="flex flex-col items-center gap-6 lg:flex-row lg:justify-between lg:gap-32">
-            <h1 className="section-header flex-1 lg:w-139">
+          <div className="flex w-full flex-col items-center gap-6 lg:flex-row lg:justify-between">
+            <h1 className="section-header flex-1 lg:w-139 lg:max-w-139">
               Explore what <span className="text-primary">MooBright </span>
               offers
             </h1>

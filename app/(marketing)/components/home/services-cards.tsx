@@ -111,7 +111,7 @@ function ServiceCard({
       style={{
         backgroundColor: background,
       }}
-      className="relative min-h-90 overflow-x-hidden rounded-xl bg-muted px-5 py-8 lg:flex lg:h-124.5 lg:overflow-y-hidden lg:p-7.5"
+      className="relative min-h-90 w-full overflow-hidden rounded-xl bg-muted px-5 py-8 lg:flex lg:h-124.5 lg:overflow-y-hidden lg:p-7.5"
     >
       <div className="flex h-full justify-between lg:block">
         <div className="flex h-full flex-col justify-between gap-10">
@@ -125,17 +125,17 @@ function ServiceCard({
             </h3>
           </div>
 
-          <p className="shrink-0 text-balance text-background lg:w-82.5 lg:max-w-82.5">
+          <p className="shrink-0 text-balance text-background lg:w-77.5 lg:max-w-77.5">
             {description}
           </p>
         </div>
 
-        <div className="arrow right-0 bottom-0 flex size-15 shrink-0 items-center justify-center rounded-full border-2 border-background text-background opacity-0 lg:hidden">
+        <button className="arrow right-0 bottom-0 flex size-15 shrink-0 cursor-pointer items-center justify-center rounded-full border-2 border-background text-background opacity-0 lg:hidden">
           <ArrowRight />
-        </div>
+        </button>
       </div>
 
-      <div className="relative flex w-100 shrink-0 flex-col justify-between">
+      <div className="relative flex shrink-0 flex-col justify-between lg:w-140">
         <Image
           className={cn(
             "relative hidden min-w-71.75 shrink-0 self-center lg:inline",
@@ -148,9 +148,9 @@ function ServiceCard({
 
           quality={100}
         />
-        <div className="arrow absolute right-0 bottom-0 hidden size-15 shrink-0 items-center justify-center self-end rounded-full border-2 border-background text-background opacity-0 lg:flex">
+        <button className="arrow absolute right-0 bottom-0 hidden size-15 shrink-0 cursor-pointer items-center justify-center self-end rounded-full border-2 border-background text-background opacity-0 lg:flex">
           <ArrowRight />
-        </div>
+        </button>
       </div>
     </div>
   )
