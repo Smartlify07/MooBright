@@ -194,14 +194,23 @@
 @media (min-width: 1024px) {
   .bg-1 {
     background-image: url(../public/home/Plumbing-hero.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
   }
 
   .bg-2 {
     background-image: url(../public/home/Laundry.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
   }
 
   .bg-3 {
     background-image: url(../public/home/Fashion-hero.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
   }
 }
 
@@ -240,30 +249,6 @@
     }
   }
 
-  .services-cards img,
-  .services-cards .arrow {
-    opacity: 0;
-    transition-duration: 200ms;
-    transition-delay: 50ms;
-  }
-
-  .services-cards img {
-    /* transform: translateX(20px); */
-  }
-
-  .services-cards .arrow {
-    /* transform: translateX(-20px); */
-  }
-  .services-cards.services-cards:has(#plumbing:hover) #plumbing img,
-  .services-cards.services-cards:has(#fashion:hover) #fashion img,
-  .services-cards.services-cards:has(#laundry:hover) #laundry img,
-  .services-cards.services-cards:has(#plumbing:hover) #plumbing .arrow,
-  .services-cards.services-cards:has(#fashion:hover) #fashion .arrow,
-  .services-cards.services-cards:has(#laundry:hover) #laundry .arrow {
-    opacity: 1;
-    visibility: visible;
-  }
-
   .services-cards:has(#fashion:hover) {
     grid-template-columns: 1fr 2fr 0fr;
 
@@ -277,6 +262,33 @@
       opacity: 1;
     }
   }
+
+  .services-cards img,
+  .services-cards .arrow {
+    opacity: 0;
+    transition-duration: 200ms;
+    transition-delay: 50ms;
+  }
+
+  .services-cards.services-cards:has(#plumbing:hover) #plumbing img,
+  .services-cards.services-cards:has(#fashion:hover) #fashion img,
+  .services-cards.services-cards:has(#laundry:hover) #laundry img,
+  .services-cards.services-cards:has(#plumbing:hover) #plumbing .arrow,
+  .services-cards.services-cards:has(#fashion:hover) #fashion .arrow,
+  .services-cards.services-cards:has(#laundry:hover) #laundry .arrow {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.services-cards.services-cards:has(#plumbing:hover) #plumbing .arrow:hover {
+  background-color: #5eb5ff;
+}
+
+.services-cards.services-cards:has(#fashion:hover) #fashion .arrow:hover {
+  background-color: #c578ff;
+}
+.services-cards.services-cards:has(#laundry:hover) #laundry .arrow:hover {
+  background-color: #e664a7;
 }
 
 @media (max-width: 1023px) {
