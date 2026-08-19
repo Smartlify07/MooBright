@@ -135,7 +135,7 @@ function ServiceCard({
         </button>
       </div>
 
-      <div className="relative flex shrink-0 flex-col justify-between lg:w-140">
+      <div className="relative flex shrink-0 flex-col justify-between justify-self-end lg:w-100 2xl:w-140">
         <Image
           className={cn(
             "relative hidden min-w-71.75 shrink-0 self-center lg:inline",
