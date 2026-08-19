@@ -34,14 +34,22 @@ const WhyChooseUsSection = () => {
       <div className="container flex flex-col gap-9 lg:gap-20">
         <header className="flex flex-col items-center gap-6 lg:items-start lg:gap-10">
           <div className="flex items-center gap-3">
-            <Sparkle className="fill-background text-background" />
-
+            <Image
+              className="size-5"
+              src="/home/white-sparkle.svg"
+              alt="white-sparkle"
+              width={20}
+              height={20}
+            />
             <div className="flex items-center">
-              <div className="flex h-7.5 min-w-22 items-center justify-center rounded-[1.25rem] border border-background p-2.5 align-middle text-base/[160%] font-medium text-background">
-                Services
+              <div className="flex h-7.5 min-w-15.25 items-center justify-center rounded-[1.25rem] border border-background p-2.5 align-middle text-base/[160%] font-medium text-background">
+                Why
               </div>
-              <div className="flex h-7.5 min-w-19.25 items-center justify-center rounded-[1.25rem] rounded-l-none border border-background p-2.5 align-middle text-base/[160%] font-medium text-background">
-                For you
+              <div className="flex h-7.5 min-w-21.25 items-center justify-center rounded-[1.25rem] rounded-l-none border border-background p-2.5 align-middle text-base/[160%] font-medium text-background">
+                Choose{" "}
+              </div>
+              <div className="flex h-7.5 min-w-10.75 items-center justify-center rounded-[1.25rem] border border-background p-2.5 align-middle text-base/[160%] font-medium text-background">
+                Us{" "}
               </div>
             </div>
           </div>
