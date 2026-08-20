@@ -68,8 +68,11 @@ const WhyChooseUsSection = () => {
         </header>
 
         <div className="grid gap-4 lg:grid-cols-3">
-          {whyChooseUs.map((item) => (
-            <div className="min-116 flex flex-col gap-6 rounded-lg bg-background px-5 py-7.5 transition-transform duration-300 lg:min-h-111.5 lg:hover:-translate-y-2">
+          {whyChooseUs.map((item, i) => (
+            <div
+              key={i}
+              className="min-116 flex flex-col gap-6 rounded-lg bg-background px-5 py-7.5 transition-transform duration-300 lg:min-h-111.5 lg:hover:-translate-y-2"
+            >
               <div className="flex h-full flex-col justify-between gap-6">
                 <div className="flex flex-col justify-between space-y-6 lg:min-h-74.25">
                   <div className="space-y-6">
