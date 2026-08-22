@@ -151,26 +151,6 @@ const Testimonials = () => {
                   key={currentTestimonial.id}
                   src={currentTestimonial.image}
                   alt=""
-                  custom={direction}
-                  initial={{
-                    opacity: 0,
-                    x: direction * 30,
-                    scale: 0.9,
-                  }}
-                  animate={{
-                    opacity: 1,
-                    x: 0,
-                    scale: 1,
-                  }}
-                  exit={{
-                    opacity: 0,
-                    x: direction * -30,
-                    scale: 0.9,
-                  }}
-                  transition={{
-                    duration: 0.3,
-                    ease: "easeInOut",
-                  }}
                   className="h-full w-full rounded-full object-cover"
                 />
               </AnimatePresence>
@@ -215,22 +195,7 @@ const Testimonials = () => {
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentTestimonial.id}
-                initial={{
-                  opacity: 0,
-                  y: 8,
-                }}
-                animate={{
-                  opacity: 1,
-                  y: 0,
-                }}
-                exit={{
-                  opacity: 0,
-                  y: -8,
-                }}
-                transition={{
-                  duration: 0.25,
-                  ease: "easeOut",
-                }}
+
                 className="space-y-1 text-center text-background md:text-left"
               >
                 <h3 className="text-2xl font-semibold md:text-[2rem]">
