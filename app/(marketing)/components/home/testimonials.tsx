@@ -77,7 +77,7 @@ const Testimonials = () => {
   }
 
   return (
-    <div className="flex flex-col overflow-hidden rounded-xl bg-[#001A56] p-4 pb-8 md:p-6 md:pb-10">
+    <div className="flex flex-col gap-4 overflow-hidden rounded-xl bg-[#001A56] p-4 pb-8 md:p-6 md:pb-10 lg:px-13">
       {/* SERVICE LABEL */}
       <div className="self-end rounded-lg bg-background/12 p-2.5 text-background">
         Fashion Service

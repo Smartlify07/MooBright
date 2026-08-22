@@ -1,3 +1,4 @@
+import FoundersSection from "./(marketing)/components/home/founders-section"
 import HeroSection from "./(marketing)/components/home/hero-section"
 import ServicesSection from "./(marketing)/components/home/services-section"
 import TestimonialsSection from "./(marketing)/components/home/testimonials-section"
@@ -10,6 +11,7 @@ export default function Page() {
       <ServicesSection />
       <WhyChooseUsSection />
       <TestimonialsSection />
+      <FoundersSection />
     </div>
   )
 }
