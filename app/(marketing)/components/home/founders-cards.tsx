@@ -108,7 +108,7 @@ function TeamCard({
           <div className="absolute top-0 left-0 -z-1 h-40 w-full bg-[#0F172A]/54 opacity-30 blur-lg lg:h-26"></div>
 
           <div className="z-20 flex w-full flex-col items-center gap-2 lg:h-25 lg:w-[309px] lg:items-start">
-            <h4 className="text-center text-4xl font-semibold text-background lg:text-start">
+            <h4 className="text-center text-4xl font-semibold whitespace-nowrap text-background lg:text-start lg:whitespace-normal">
               {name}
             </h4>
             <h6 className="text-base text-background">{role}</h6>
