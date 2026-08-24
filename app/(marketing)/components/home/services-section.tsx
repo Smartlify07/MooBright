@@ -31,7 +31,7 @@ const ServicesSection = () => {
               Explore what <span className="text-primary">MooBright </span>
               offers
             </h1>
-            <p className="text-center text-base/[160%] lg:max-w-168.75 lg:text-start">
+            <p className="text-center text-base/[160%] lg:max-w-100 lg:text-start xl:max-w-168.75">
               Whether it's creating beautiful styles for you to wear, staying on
               top of your laundry, or helping with all your plumbing needs, we
               bring the same standard of care to everything we do.

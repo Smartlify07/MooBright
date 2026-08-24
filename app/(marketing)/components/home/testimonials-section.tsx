@@ -35,7 +35,7 @@ const TestimonialsSection = () => {
             <h1 className="section-header lg:w-124 lg:max-w-124">
               Real words from clients who trust us.{" "}
             </h1>
-            <p className="text-center text-base/[160%] lg:max-w-160.75 lg:text-start 2xl:max-w-185.5">
+            <p className="text-center text-base/[160%] lg:max-w-100 lg:text-start xl:max-w-160.75 2xl:max-w-185.5">
               Hear what our clients have to say about working with us. Real
               experiences, honest feedback, and genuine results. See why they
               continue to choose us.
