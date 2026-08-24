@@ -87,7 +87,7 @@ const services = [
 
 const ServicesCards = () => {
   return (
-    <div className="services-cards flex flex-col gap-3 overflow-x-hidden py-3 lg:gap-4 lg:py-0">
+    <div className="services-cards flex flex-col gap-3 overflow-hidden py-3 lg:grid lg:gap-4 lg:py-0">
       <ServiceCard {...services[0]} />
       <ServiceCard {...services[1]} />
       <ServiceCard {...services[2]} />
@@ -111,7 +111,7 @@ function ServiceCard({
       style={{
         backgroundColor: background,
       }}
-      className="relative min-h-90 w-full overflow-hidden rounded-xl bg-muted px-5 py-8 lg:flex lg:h-124.5 lg:overflow-y-hidden lg:p-7.5"
+      className="relative min-h-90 overflow-hidden rounded-xl bg-muted px-5 py-8 lg:flex lg:h-124.5 lg:overflow-y-hidden lg:p-7.5"
     >
       <div className="flex h-full justify-between lg:block">
         <div className="flex h-full flex-col justify-between gap-10">

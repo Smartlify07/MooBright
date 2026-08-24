@@ -58,7 +58,7 @@ const WhyChooseUsSection = () => {
             <h1 className="section-header text-background! lg:w-124 lg:max-w-124">
               You can always count on us to deliver right
             </h1>
-            <p className="text-center text-base/[160%] text-background lg:max-w-160.75 lg:text-start 2xl:max-w-185.5">
+            <p className="text-center text-base/[160%] text-background lg:max-w-100 lg:text-start xl:max-w-160.75 2xl:max-w-185.5">
               Choosing Moobright means choosing a team you can trust. Whether
               it’s your plumbing, fashion, or laundry needs, we’re committed to
               providing dependable, efficient service and making sure every job

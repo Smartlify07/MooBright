@@ -69,37 +69,42 @@ function TeamCard({
 }) {
   return (
     <div
-      className="relative z-20 flex h-203.5 gap-50 overflow-hidden px-4 py-10 first:rounded-l-2xl last:rounded-r-2xl"
+      className="relative z-20 flex h-203.5 overflow-hidden first:rounded-l-[1.25rem] last:rounded-r-[1.25rem]"
       style={{ backgroundColor: background }}
       id={id}
     >
-      <Image
-        width={526}
-        height={814}
-        src={imageURL}
-        alt={alt}
-        className="absolute top-0 left-0 z-1 h-203.5 w-[526px] max-w-[526px] object-cover"
-      />
-      <Image
-        width={300}
-        height={300}
-        src={bigCircleURL}
-        className="absolute top-10 left-32 -z-1 size-75 shrink-0"
-        alt="semi-circle-vector"
-        data-slot="big-semi-circle"
-      />
-      <div data-slot="role" className="relative z-10 mt-auto">
-        <div className="absolute top-0 left-0 -z-1 h-26 w-full bg-[#0F172A]/54 opacity-30 blur-lg"></div>
+      <div className="relative z-1 h-203.5 w-[526px] max-w-[526px] min-w-[526px]">
+        <Image
+          width={526}
+          height={814}
+          src={imageURL}
+          alt={alt}
+          className="absolute top-0 left-0 z-1 h-203.5 w-[526px] max-w-[526px] object-cover"
+        />
+        <Image
+          width={300}
+          height={300}
+          src={bigCircleURL}
+          className="absolute top-10 left-24 -z-1 size-75 shrink-0"
+          alt="semi-circle-vector"
+          data-slot="big-semi-circle"
+        />
+        <div
+          data-slot="role"
+          className="absolute bottom-10 z-10 mt-auto w-[309px] px-4"
+        >
+          <div className="absolute top-0 left-0 -z-1 h-26 w-full bg-[#0F172A]/54 opacity-30 blur-lg"></div>
 
-        <div className="z-20 flex h-25 w-[309px] flex-col gap-2">
-          <h4 className="text-4xl font-semibold text-background">{name}</h4>
-          <h6 className="text-base text-background">{name}</h6>
+          <div className="z-20 flex h-25 w-[309px] flex-col gap-2">
+            <h4 className="text-4xl font-semibold text-background">{name}</h4>
+            <h6 className="text-base text-background">{role}</h6>
+          </div>
         </div>
       </div>
-      <div className="flex w-220 flex-col justify-between">
+      <div className="flex max-w-160 min-w-160 flex-col justify-between py-10 pr-6 1.5xl:max-w-185 1.5xl:min-w-185 2xl:max-w-225 2xl:min-w-225">
         <p
           data-slot="description"
-          className="w-150 max-w-120 shrink-0 justify-self-end text-xl whitespace-pre-line text-background xl:max-w-150 2xl:w-190 2xl:max-w-190 2xl:text-2xl"
+          className="shrink-0 justify-self-end text-xl whitespace-pre-line text-background 2xl:text-2xl"
         >
           {description.split("\n").map((line, index) => (
             <React.Fragment key={index}>
@@ -114,10 +119,10 @@ function TeamCard({
           ))}
         </p>
 
-        <div className="flex w-160 items-center justify-between 2xl:w-220">
+        <div className="flex items-center justify-between">
           <div
             data-slot="mobile-role"
-            className="z-20 mt-auto flex h-25 w-[309px] flex-col gap-2"
+            className="z-20 mt-auto flex h-25 flex-col gap-2"
           >
             <h4 className="text-4xl font-semibold whitespace-nowrap text-background">
               {name}
@@ -131,7 +136,7 @@ function TeamCard({
             height={100}
             priority
             data-slot="semi-circle"
-            className="self-end object-cover"
+            className="size-25 self-end object-cover"
             src="/home/semi-circles.svg"
           />
         </div>
@@ -142,7 +147,7 @@ function TeamCard({
 
 const TeamCards = () => {
   return (
-    <div className="team-grid gap-0">
+    <div className="team-grid gap-4">
       {team.map((t, i) => (
         <TeamCard {...t} key={i} />
       ))}

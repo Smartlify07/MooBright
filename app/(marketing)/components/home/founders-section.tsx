@@ -28,7 +28,7 @@ const FoundersSection = () => {
             </div>
           </div>
 
-          <div className="2xll:gap-32 flex w-full flex-col items-center gap-6 lg:flex-row lg:justify-between">
+          <div className="2xll:gap-32 flex w-full flex-col items-center gap-6 lg:flex-row lg:items-start lg:justify-between">
             <h1 className="section-header lg:w-139 lg:max-w-139">
               Meet the minds behind{" "}
               <span className="text-primary">MooBright</span>{" "}
