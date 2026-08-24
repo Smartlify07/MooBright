@@ -73,15 +73,15 @@ const WhyChooseUsSection = () => {
               key={i}
               className="min-116 flex flex-col gap-6 rounded-lg bg-background px-5 py-7.5 transition-transform duration-300 lg:min-h-111.5 lg:hover:-translate-y-2"
             >
-              <div className="flex h-full flex-col justify-between gap-6">
-                <div className="flex flex-col justify-between space-y-6 lg:min-h-74.25">
+              <div className="flex h-full flex-col gap-6 lg:justify-between">
+                <div className="flex flex-col space-y-6 lg:min-h-74.25 lg:justify-between">
                   <div className="space-y-6">
                     <item.icon
                       strokeWidth={1.5}
                       className="size-13"
                       style={{ color: item.color }}
                     />
-                    <h1 className="tracking-neg-5 min-h-21.75 max-w-91.5 text-[2rem] font-medium lg:text-4xl/[110%]">
+                    <h1 className="tracking-neg-5 max-w-91.5 text-[2rem] font-medium lg:min-h-21.75 lg:text-4xl/[110%]">
                       {item.title}
                     </h1>
                   </div>

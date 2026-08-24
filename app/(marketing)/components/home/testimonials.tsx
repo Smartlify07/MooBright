@@ -77,7 +77,7 @@ const Testimonials = () => {
   }
 
   return (
-    <div className="flex flex-col gap-4 overflow-hidden rounded-xl bg-[#001A56] p-4 pb-8 md:p-6 md:pb-10 lg:px-13">
+    <div className="flex min-h-178 flex-col gap-4 overflow-hidden rounded-xl bg-[#001A56] p-4 pb-8 md:p-6 md:pb-10 lg:min-h-auto lg:px-13">
       {/* SERVICE LABEL */}
       <div className="self-end rounded-lg bg-background/12 p-2.5 text-background">
         Fashion Service
@@ -142,7 +142,7 @@ const Testimonials = () => {
         </div>
 
         {/* TESTIMONIAL CONTENT */}
-        <div className="flex min-h-0 w-full max-w-[697px] flex-col items-center justify-between text-center md:min-h-[446px] md:items-stretch md:text-left">
+        <div className="flex min-h-143 w-full max-w-[697px] flex-col items-center justify-between text-center md:min-h-[446px] md:items-stretch md:text-left lg:min-h-0">
           {/* MOBILE IMAGE */}
           <div className="mb-8 flex justify-center md:hidden">
             <div className="size-12.5 overflow-hidden rounded-full border-2 border-background">
@@ -212,7 +212,7 @@ const Testimonials = () => {
             <div className="flex items-center gap-4 text-background">
               <button
                 onClick={previous}
-                className="flex size-13 items-center justify-center rounded-full border border-background md:size-15"
+                className="flex size-13 items-center justify-center rounded-full border border-background hover:bg-background hover:text-foreground md:size-15"
                 aria-label="Previous testimonial"
               >
                 <ArrowLeft className="size-5 md:size-6" />
@@ -220,7 +220,7 @@ const Testimonials = () => {
 
               <button
                 onClick={next}
-                className="flex size-13 items-center justify-center rounded-full border border-background md:size-15"
+                className="flex size-13 items-center justify-center rounded-full border border-background hover:bg-background hover:text-foreground md:size-15"
                 aria-label="Next testimonial"
               >
                 <ArrowRight className="size-5 md:size-6" />
