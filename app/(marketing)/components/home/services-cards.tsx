@@ -113,7 +113,7 @@ function ServiceCard({
       }}
       className="relative min-h-90 overflow-hidden rounded-xl bg-muted px-5 py-8 lg:flex lg:h-124.5 lg:overflow-y-hidden lg:px-0"
     >
-      <div className="flex h-full justify-between pl-7.5 lg:block">
+      <div className="flex h-full justify-between lg:block lg:pl-7.5">
         <div className="flex h-full flex-col justify-between gap-10">
           <div className="flex flex-col gap-6">
             <div className="flex size-15 items-center justify-center rounded-full bg-background [&>svg]:size-6">
