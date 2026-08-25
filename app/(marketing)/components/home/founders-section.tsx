@@ -11,7 +11,7 @@ const FoundersSection = () => {
             <Image
               className="size-5"
               src="/home/black-sparkle.svg"
-              alt="white-sparkle"
+              alt="black-sparkle"
               width={20}
               height={20}
             />
