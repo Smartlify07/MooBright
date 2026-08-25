@@ -74,18 +74,19 @@ function TeamCard({
 }) {
   return (
     <div
-      className="relative z-20 flex h-120 overflow-hidden rounded-[1.25rem] lg:h-203.5 lg:rounded-none lg:first:rounded-l-[1.25rem] lg:last:rounded-r-[1.25rem]"
+      className="relative z-20 flex h-120 gap-6 overflow-hidden rounded-[1.25rem] lg:h-203.5 lg:rounded-none lg:first:rounded-l-[1.25rem] lg:last:rounded-r-[1.25rem]"
       style={{ backgroundColor: background }}
       id={id}
     >
-      <div className="relative z-1 h-120 w-103.5 max-w-103.5 lg:h-203.5 lg:w-[526px] lg:max-w-[526px] lg:min-w-[526px]">
+      <div className="relative z-1 h-120 w-full max-w-full lg:h-203.5 lg:w-[556px] lg:max-w-[556px] lg:min-w-[556px]">
         <Image
-          width={526}
+          width={776}
           height={814}
           src={imageURL}
           alt={alt}
-          className="top-0 left-0 z-1 hidden h-203.5 object-cover lg:absolute lg:inline lg:w-[526px] lg:max-w-[526px]"
+          className="top-0 z-1 hidden h-203.5 object-cover object-[100%_0%] lg:absolute lg:inline"
         />
+
         <Image
           width={526}
           height={814}
@@ -103,7 +104,7 @@ function TeamCard({
         />
         <div
           data-slot="role"
-          className="absolute bottom-4 z-10 mt-auto w-full px-4 lg:bottom-10 lg:w-[309px]"
+          className="absolute bottom-4 left-0 z-10 mt-auto w-full px-4 lg:bottom-10 lg:w-[309px]"
         >
           <div className="absolute top-0 left-0 -z-1 h-40 w-full bg-[#0F172A]/54 opacity-30 blur-lg lg:h-26"></div>
 
@@ -116,10 +117,10 @@ function TeamCard({
         </div>
         <div
           style={{ background: background }}
-          className="absolute -bottom-50 h-85.25 w-142 blur-[9.375rem]"
+          className="absolute -bottom-50 left-0 h-85.25 w-full blur-[9.75rem] lg:w-142"
         ></div>
       </div>
-      <div className="hidden max-w-160 min-w-160 flex-col justify-between py-10 pr-6 lg:flex 1.5xl:max-w-185 1.5xl:min-w-185 2xl:max-w-225 2xl:min-w-225">
+      <div className="hidden max-w-150 min-w-150 flex-col justify-between py-10 pr-6 lg:flex 1.5xl:max-w-175 1.5xl:min-w-175 2xl:max-w-210 2xl:min-w-210">
         <p
           data-slot="description"
           className="shrink-0 justify-self-end text-xl whitespace-pre-line text-background 2xl:text-2xl"
