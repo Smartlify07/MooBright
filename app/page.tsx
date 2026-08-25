@@ -1,4 +1,5 @@
 import ContactUsSection from "./(marketing)/components/home/contact-us-section"
+import Footer from "./(marketing)/components/home/footer"
 import FoundersSection from "./(marketing)/components/home/founders-section"
 import HeroSection from "./(marketing)/components/home/hero-section"
 import ServicesSection from "./(marketing)/components/home/services-section"
@@ -14,6 +15,7 @@ export default function Page() {
       <TestimonialsSection />
       <FoundersSection />
       <ContactUsSection />
+      <Footer />
     </div>
   )
 }
