@@ -29,7 +29,9 @@ const formSchema = z.object({
     error: "Invalid email address",
   }),
   name: z.string("Name cannot be empty").min(1, "This field cannot be empty"),
-  message: z.string("Message cannot be empty").min(50),
+  message: z
+    .string("Message cannot be empty")
+    .min(50, "Cannot be less than 50 characters"),
 })
 const ContactUsSection = () => {
   const form = useForm<z.infer<typeof formSchema>>({
@@ -40,7 +42,12 @@ const ContactUsSection = () => {
       message: "",
     },
   })
-  const onSubmit = (data: z.infer<typeof formSchema>) => {}
+  const onSubmit = (data: z.infer<typeof formSchema>) => {
+    toast("Your message has been sent to the team", {
+      className: "font-sans",
+    })
+    console.log(data)
+  }
   return (
     <section className="section-spacing">
       <div className="container flex flex-col gap-9 lg:gap-20">
@@ -178,7 +185,7 @@ const ContactUsSection = () => {
                               id="contact-form-message"
                               placeholder="I'm having an issue with the login button on mobile."
                               rows={6}
-                              className="max-h-40.5 min-h-40.5 resize-none placeholder:text-background/90"
+                              className="max-h-40.5 min-h-40.5 resize-none text-background placeholder:text-background/90"
                               aria-invalid={fieldState.invalid}
                             />
                           </InputGroup>
@@ -196,7 +203,7 @@ const ContactUsSection = () => {
                     type="submit"
                     variant="outline"
                     className="h-9 h-10 rounded-lg lg:h-12"
-                    form="form-rhf-demo"
+                    form="contact-form"
                   >
                     Submit
                   </Button>
