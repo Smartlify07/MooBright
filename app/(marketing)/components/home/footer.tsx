@@ -105,7 +105,7 @@ const Footer = () => {
         </div>
 
         <div className="relative h-20 lg:h-47.75">
-          <h1 className="tracking-neg-5 absolute -bottom-20 left-1/2 -translate-x-1/2 bg-linear-180 from-background from-0% to-primary to-100% bg-clip-text text-center text-[4.5rem] font-semibold text-transparent uppercase lg:-bottom-32 xl:text-[13rem] 2xl:-bottom-32 2xl:text-[15rem]">
+          <h1 className="tracking-neg-5 absolute -bottom-20 left-1/2 -translate-x-1/2 bg-linear-180 from-background from-0% to-primary to-100% bg-clip-text text-center text-[4rem] font-semibold text-transparent uppercase sm:text-[4.5rem] lg:-bottom-32 xl:text-[13rem] 2xl:-bottom-32 2xl:text-[15rem]">
             Moobright
           </h1>
         </div>
