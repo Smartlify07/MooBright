@@ -36,20 +36,31 @@ const Navbar = () => {
 
   const pathname = usePathname()
 
+  const isTransparent = pathname === "/"
+
   return (
-    <nav className="absolute top-10 left-0 flex w-full items-center px-5 text-background lg:px-10">
+    <nav className="absolute top-10 left-0 flex w-full items-center px-5 lg:px-10">
       <div className="container flex items-center justify-between text-sm">
         <Link href="/" className="z-1000">
           <Image
             width={51}
             height={50}
             alt="MoobrightLogo"
-            src="/moobrightlogo.svg"
+            src={
+              isTransparent ? "/moobrightlogo.svg" : "/moobright-logo-blue.svg"
+            }
             className="size-10 lg:size-12.5"
           />
         </Link>
 
-        <ul className="z-1000 hidden items-center justify-center gap-6 lg:flex">
+        <ul
+          className={cn(
+            "z-1000 hidden items-center justify-center gap-6 lg:flex",
+            isTransparent
+              ? "text-background hover:text-background/90"
+              : "text-foreground hover:text-foreground/90"
+          )}
+        >
           {navLinks.map((link) => (
             <Link key={link.href} href={link.href}>
               {link.label}
@@ -59,7 +70,12 @@ const Navbar = () => {
 
         <Button
           variant="secondary"
-          className="group z-1000 hidden h-9 w-31 text-sm lg:flex"
+          className={cn(
+            "group z-1000 hidden h-9 w-31 text-sm lg:flex",
+            isTransparent
+              ? "bg-background"
+              : "bg-foreground text-background hover:bg-foreground/90"
+          )}
         >
           Get a quote{" "}
           <ArrowRight className="transition-transform group-hover:translate-x-0.5" />

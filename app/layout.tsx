@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { cn } from "@/lib/utils"
 import Navbar from "@/components/navbar"
 import { Toaster } from "sonner"
+import Footer from "./(marketing)/components/home/footer"
 
 const fontMono = Geist_Mono({
   subsets: ["latin"],
@@ -36,6 +37,7 @@ export default function RootLayout({
         <Navbar />
 
         {children}
+        <Footer />
         <Toaster />
       </body>
     </html>

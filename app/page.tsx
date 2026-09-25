@@ -15,7 +15,6 @@ export default function Page() {
       <TestimonialsSection />
       <FoundersSection />
       <ContactUsSection />
-      <Footer />
     </div>
   )
 }
