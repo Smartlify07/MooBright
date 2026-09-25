@@ -48,13 +48,13 @@ const ServicesSection = () => {
             {services.slice(0, 2).map((s, i) => (
               <div
                 key={i}
-                className="relative flex h-77 flex-col items-center justify-center gap-10 overflow-hidden rounded-2xl p-10 lg:h-124.5"
+                className="group relative flex h-77 flex-col items-center justify-center gap-10 overflow-hidden rounded-2xl p-10 lg:h-124.5"
               >
                 <div className="absolute inset-0 z-40 h-full w-full bg-black/80"></div>
                 <Image
                   src={s.image}
                   alt="Dry Cleaning"
-                  className="absolute inset-0 h-full w-full object-cover"
+                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-120"
                   width={400}
                   height={400}
                 />
@@ -75,13 +75,13 @@ const ServicesSection = () => {
             {services.slice(2).map((s, i) => (
               <div
                 key={i}
-                className="relative flex h-102.75 flex-col items-center justify-center gap-10 overflow-hidden rounded-2xl bg-foreground p-10 lg:h-124.5"
+                className="group relative flex h-102.75 flex-col items-center justify-center gap-10 overflow-hidden rounded-2xl bg-foreground p-10 lg:h-124.5"
               >
                 <div className="absolute inset-0 z-40 h-full w-full bg-black/80"></div>
                 <Image
                   src={s.image}
                   alt="Dry Cleaning"
-                  className="absolute inset-0 h-full w-full object-cover"
+                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-120"
                   width={400}
                   height={400}
                 />
