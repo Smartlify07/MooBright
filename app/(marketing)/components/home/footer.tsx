@@ -46,10 +46,10 @@ const Footer = () => {
 
             <Button
               variant="outline"
-              className="h-11 w-48 self-center lg:self-start"
+              className="group h-11 w-48 self-center lg:self-start"
             >
               Explore services
-              <ArrowRight />
+              <ArrowRight className="transition group-hover:translate-x-1" />
             </Button>
           </div>
 
@@ -68,7 +68,11 @@ const Footer = () => {
             <h4 className="text-xl font-semibold">Quick links</h4>
             <div className="flex flex-col space-y-2">
               {links.map((link, i) => (
-                <Link key={i} className="text-background" href={link.href}>
+                <Link
+                  key={i}
+                  className="text-background hover:text-background/80"
+                  href={link.href}
+                >
                   {link.label}
                 </Link>
               ))}
@@ -78,7 +82,11 @@ const Footer = () => {
             <h4 className="text-xl font-semibold">Legal links</h4>
             <div className="flex flex-col space-y-2">
               {legalLinks.map((link, i) => (
-                <Link key={i} className="text-background" href={link.href}>
+                <Link
+                  key={i}
+                  className="text-background hover:text-background/80"
+                  href={link.href}
+                >
                   {link.label}
                 </Link>
               ))}
@@ -92,7 +100,7 @@ const Footer = () => {
               <a
                 key={i}
                 href={s.href}
-                className="flex size-10 items-center justify-center rounded-full bg-[#1E315D] text-background"
+                className="flex size-10 items-center justify-center rounded-full bg-[#1E315D] text-background transition-colors hover:bg-background hover:text-[#1E315D]"
               >
                 <s.icon height="1.25rem" />
               </a>

@@ -26,7 +26,7 @@ const HeroSection = () => {
             </svg>
           </header>
 
-          <article className="max-w-2xl text-base lg:text-2xl">
+          <article className="max-w-2xl text-justify text-base font-normal lg:text-2xl/[170%]">
             MooBright began with our founder, Moses Oladele, and his work in
             plumbing. What started as a personal pursuit of providing dependable
             plumbing solutions gradually grew into a bigger vision — to build a

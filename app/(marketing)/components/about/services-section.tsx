@@ -1,4 +1,6 @@
+"use client"
 import { Button } from "@/components/ui/button"
+import SparkleFilledIcon from "@iconify-react/boxicons/sparkle-filled"
 import { ArrowRight } from "lucide-react"
 import Image from "next/image"
 import React from "react"
@@ -98,12 +100,7 @@ const ServicesSection = () => {
             <div className="flex flex-col gap-10 rounded-2xl bg-foreground p-10">
               <div className="flex flex-col gap-6">
                 <div className="flex size-15 items-center justify-center rounded-full bg-background">
-                  <Image
-                    src="/home/black-sparkle.svg"
-                    alt="black-sparkle"
-                    width={24}
-                    height={24}
-                  />
+                  <SparkleFilledIcon height="2em" />
                 </div>
                 <div className="flex flex-col gap-4">
                   <h1 className="tracking-neg-5 text-3xl font-semibold text-background lg:text-5xl">
