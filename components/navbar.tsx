@@ -18,16 +18,18 @@ const navLinks = [
     label: "About",
   },
   {
-    href: "/services",
+    href: "#services",
     label: "Services",
   },
   {
-    href: "/contact",
+    href: "#contact",
     label: "Contact",
   },
 ]
 
-const Navbar = () => {
+const allowedPages = ["/", "/about"]
+
+const Navbar = ({ isTransparent = true }: { isTransparent?: boolean }) => {
   const [isOpen, setIsOpen] = useState(false)
 
   const toggle = () => {
@@ -35,8 +37,6 @@ const Navbar = () => {
   }
 
   const pathname = usePathname()
-
-  const isTransparent = pathname === "/"
 
   return (
     <nav className="absolute top-10 left-0 flex w-full items-center px-5 lg:px-10">
@@ -82,7 +82,10 @@ const Navbar = () => {
         </Button>
 
         <button
-          className="z-1000 cursor-pointer lg:hidden"
+          className={cn(
+            "z-1000 cursor-pointer lg:hidden",
+            isTransparent ? "text-background" : "text-foreground"
+          )}
           onClick={() => {
             toggle()
           }}

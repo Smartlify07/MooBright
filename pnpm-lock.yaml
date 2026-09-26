@@ -26,9 +26,15 @@ importers:
       '@iconify-react/ic':
         specifier: ^1.0.2
         version: 1.0.2(react@19.2.4)
+      '@iconify-react/maki':
+        specifier: gitlab:iconify-icons/react#maki
+        version: https://gitlab.com/api/v4/projects/iconify-icons%2Freact/repository/archive.tar.gz?sha=4505352c1924e585cdd0bce548e9f47b837ae7dd(react@19.2.4)
       '@iconify-react/mdi':
         specifier: ^1.0.2
         version: 1.0.2(react@19.2.4)
+      '@iconify-react/noto':
+        specifier: gitlab:iconify-icons/react#noto
+        version: https://gitlab.com/api/v4/projects/iconify-icons%2Freact/repository/archive.tar.gz?sha=ef08bac0eff8b51c67d3855b3f9d1bda32d542d3(react@19.2.4)
       '@iconify-react/ri':
         specifier: ^1.0.2
         version: 1.0.2(react@19.2.4)
@@ -471,8 +477,16 @@ packages:
   '@iconify-react/ic@1.0.2':
     resolution: {integrity: sha512-Ofo00y/HAWus5Cm12FW3uqsmilRjCYqoIbOwgU7bnDSv8afRm6sCTj41as+/vc6Y8a5ROB9Mj2YYlH87BFs/SQ==}
 
+  '@iconify-react/maki@https://gitlab.com/api/v4/projects/iconify-icons%2Freact/repository/archive.tar.gz?sha=4505352c1924e585cdd0bce548e9f47b837ae7dd':
+    resolution: {tarball: https://gitlab.com/api/v4/projects/iconify-icons%2Freact/repository/archive.tar.gz?sha=4505352c1924e585cdd0bce548e9f47b837ae7dd}
+    version: 1.0.0
+
   '@iconify-react/mdi@1.0.2':
     resolution: {integrity: sha512-p7YgR1oh8523fLQydG6cu53I/de5EkAnsbusQVJSqb6PYmN2MiKO9ovo/RkBV/jQNx+hHRG5VHM1YWpUfJeUFQ==}
+
+  '@iconify-react/noto@https://gitlab.com/api/v4/projects/iconify-icons%2Freact/repository/archive.tar.gz?sha=ef08bac0eff8b51c67d3855b3f9d1bda32d542d3':
+    resolution: {tarball: https://gitlab.com/api/v4/projects/iconify-icons%2Freact/repository/archive.tar.gz?sha=ef08bac0eff8b51c67d3855b3f9d1bda32d542d3}
+    version: 1.0.0
 
   '@iconify-react/ri@1.0.2':
     resolution: {integrity: sha512-I8UugTKMp5AggweGbaQEUZhfncr0n34sBp5N1RNN6pQUWDVJNMyaBaFrvN+b/xZXAO2y2TOJdWOvb5i8POf91w==}
@@ -3536,7 +3550,19 @@ snapshots:
     transitivePeerDependencies:
       - react
 
+  '@iconify-react/maki@https://gitlab.com/api/v4/projects/iconify-icons%2Freact/repository/archive.tar.gz?sha=4505352c1924e585cdd0bce548e9f47b837ae7dd(react@19.2.4)':
+    dependencies:
+      '@iconify/css-react': 1.0.2(react@19.2.4)
+    transitivePeerDependencies:
+      - react
+
   '@iconify-react/mdi@1.0.2(react@19.2.4)':
+    dependencies:
+      '@iconify/css-react': 1.0.2(react@19.2.4)
+    transitivePeerDependencies:
+      - react
+
+  '@iconify-react/noto@https://gitlab.com/api/v4/projects/iconify-icons%2Freact/repository/archive.tar.gz?sha=ef08bac0eff8b51c67d3855b3f9d1bda32d542d3(react@19.2.4)':
     dependencies:
       '@iconify/css-react': 1.0.2(react@19.2.4)
     transitivePeerDependencies:
