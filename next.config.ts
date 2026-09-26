@@ -4,6 +4,9 @@ const nextConfig: NextConfig = {
   images: {
     qualities: [100, 90, 80, 75],
   },
+  experimental: {
+    globalNotFound: true,
+  },
 }
 
 export default nextConfig

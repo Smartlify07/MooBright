@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils"
 import Navbar from "@/components/navbar"
 import { Toaster } from "sonner"
 import Footer from "./(marketing)/components/home/footer"
+import LayoutClient from "./(marketing)/components/layout-client"
 
 const fontMono = Geist_Mono({
   subsets: ["latin"],
@@ -34,11 +35,7 @@ export default function RootLayout({
       )}
     >
       <body className="relative min-h-svh overflow-x-hidden">
-        <Navbar />
-
-        {children}
-        <Footer />
-        <Toaster />
+        <LayoutClient>{children}</LayoutClient>
       </body>
     </html>
   )

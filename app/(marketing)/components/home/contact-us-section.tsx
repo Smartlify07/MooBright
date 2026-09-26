@@ -202,7 +202,7 @@ const ContactUsSection = () => {
                   <Button
                     type="submit"
                     variant="outline"
-                    className="h-9 h-10 rounded-lg lg:h-12"
+                    className="h-10 rounded-lg lg:h-12"
                     form="contact-form"
                   >
                     Submit
