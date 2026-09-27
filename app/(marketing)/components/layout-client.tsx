@@ -15,7 +15,6 @@ const LayoutClient = ({
   return (
     <>
       <Navbar isTransparent={shouldBeTransparent} />
-
       {children}
       <Footer />
       <Toaster />
